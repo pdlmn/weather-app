@@ -1,0 +1,25 @@
+/*!**************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!./style.css ***!
+  \**************************************************************/
+:root {
+  font-size: 13px;
+}
+
+body {
+  background: rgb(30, 30, 30);
+  color: rgb(220, 220, 220);
+  font-family: sans-serif;
+}
+
+.weather-card {
+  background: rgba(0, 0, 0, .2);
+  width: 200px;
+  font-size: 1.15rem;
+}
+
+.invisible {
+  display: hidden;
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJtYXBwaW5ncyI6Ijs7O0FBQUE7RUFDRSxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsMkJBQTJCO0VBQzNCLHlCQUF5QjtFQUN6Qix1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSw2QkFBNkI7RUFDN0IsWUFBWTtFQUNaLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGVBQWU7QUFDakIiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zdHlsZS5jc3MiXSwic291cmNlc0NvbnRlbnQiOlsiOnJvb3Qge1xuICBmb250LXNpemU6IDEzcHg7XG59XG5cbmJvZHkge1xuICBiYWNrZ3JvdW5kOiByZ2IoMzAsIDMwLCAzMCk7XG4gIGNvbG9yOiByZ2IoMjIwLCAyMjAsIDIyMCk7XG4gIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xufVxuXG4ud2VhdGhlci1jYXJkIHtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAuMik7XG4gIHdpZHRoOiAyMDBweDtcbiAgZm9udC1zaXplOiAxLjE1cmVtO1xufVxuXG4uaW52aXNpYmxlIHtcbiAgZGlzcGxheTogaGlkZGVuO1xufVxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9*/

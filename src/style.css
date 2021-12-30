@@ -1,0 +1,23 @@
+:root {
+  font-size: 13px;
+}
+
+body {
+  background: rgb(30, 30, 30);
+  color: rgb(220, 220, 220);
+  font-family: sans-serif;
+}
+
+.weather-card {
+  background: rgba(0, 0, 0, .2);
+  width: 200px;
+  font-size: 1.15rem;
+}
+
+.error {
+  color: rgb(250, 100, 100);
+}
+
+.invisible {
+  visibility: hidden;
+}
