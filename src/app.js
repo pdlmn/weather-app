@@ -1,9 +1,10 @@
-import { getWeatherData, formatWeatherData } from './weather.js'
+import { getWeatherData, weatherDataFormatter } from './weather.js'
+import { addErrorHandler } from './utils'
 
 const main = document.querySelector('main')
 const cityInput = document.querySelector('.city-input input')
 const errorDiv = document.querySelector('.error')
-const searchButton = document.querySelector('.city-input button')
+const searchButton = document.querySelector('#search')
 const unitsInput = document.querySelector('#units')
 
 const displayError = (message) => {
@@ -15,8 +16,6 @@ const hideError = () => {
   if (errorDiv.classList.contains('invisible')) return
   errorDiv.classList.add('invisible')
 }
-
-const addErrorHandler = (fn) => (...params) => fn(...params).catch(displayError)
 
 const createCardRow = (el, text = ' ') => {
   const cardRow = document.createElement(el)
@@ -42,11 +41,14 @@ const createCard = () => {
 
 const addDataToCard = async () => {
   const weatherCard = document.querySelector('.weather-card')
-  const data = formatWeatherData(await getWeatherData(cityInput.value, unitsInput.value), unitsInput.value)
+  const data = weatherDataFormatter[unitsInput.value](await getWeatherData(cityInput.value, unitsInput.value))
   if (weatherCard) weatherCard.remove()
   main.append(createCard())
   document.querySelectorAll('.card-row').forEach((row, i) => row.innerText += Object.values(data)[i])
 }
 
-searchButton.addEventListener('click', addErrorHandler(addDataToCard))
+searchButton.addEventListener('click', () => {
+  if (!cityInput.value) return
+  addErrorHandler(displayError, addDataToCard)()
+})
 cityInput.addEventListener('input', hideError)

@@ -1,17 +1,98 @@
 :root {
-  font-size: 13px;
+  font-size: 10px;
 }
 
 body {
+  margin: 0;
   background: rgb(30, 30, 30);
   color: rgb(220, 220, 220);
   font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-image: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(./img/winter.jpg);
+  
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(70, 70, 70, 0.9);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 50%;
+}
+
+.city-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.city-input input,
+#units,
+#search {
+  padding: 0.5rem 2rem;
+  border: 2px solid black;
+  color: inherit;
+  background: rgba(50, 50, 50, 0.9);
+  border-radius: 4px;
+}
+
+.city-input input {
+  flex: 1 1 0;
+}
+
+.button-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#search,
+#units {
+  flex: 1;
+  min-width: 100px;
+  max-width: 50%;
+}
+
+#search:hover,
+#units:hover {
+  background: rgb(80, 80, 80, 0.9);
+  transition: 0.07s;
 }
 
 .weather-card {
   background: rgba(0, 0, 0, .2);
-  width: 200px;
+  padding: 2rem;
   font-size: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 8px;
+}
+
+.weather-card h2 {
+  margin-top: 0;
 }
 
 .error {
@@ -20,4 +101,10 @@ body {
 
 .invisible {
   visibility: hidden;
+}
+
+@media all and (min-width: 540px) {
+  :root {
+    font-size: 16px;
+  }
 }

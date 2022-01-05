@@ -28,11 +28,11 @@ module.exports = {
     ],
   },
   plugins: [
-    // new CopyPlugin({
-      //   patterns: [
-        //     { from: './img', to: './img' },
-        //   ],
-      // }),
+    new CopyPlugin({
+        patterns: [
+            { from: './img', to: './img' },
+          ],
+      }),
     new MiniCssExtractPlugin(),
   ],
 };

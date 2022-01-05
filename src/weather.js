@@ -10,8 +10,8 @@ const getWeatherData = async (city, units) => {
   return json
 }
 
-const formatWeatherData = (json, units) => {
-  if (units === 'metric') {
+const weatherDataFormatter = {
+  metric(json) {
     return ({
       city: json.name,
       weather: ` ${json.weather[0].main}`,
@@ -21,8 +21,9 @@ const formatWeatherData = (json, units) => {
       humidity: ` ${json.main.humidity}%`,
       pressure: ` ${json.main.pressure} hPa`
     })
-  }
-  if (units === 'imperial') {
+  },
+
+  imperial(json) {
     return ({
       city: json.name,
       weather: ` ${json.weather[0].main}`,
@@ -35,4 +36,4 @@ const formatWeatherData = (json, units) => {
   }
 }
 
-export { getWeatherData, formatWeatherData }
+export { getWeatherData, weatherDataFormatter }
