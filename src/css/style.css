@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(./img/winter.jpg);
+  background-image: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(../img/winter.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -80,7 +80,7 @@ main {
 
 #search:hover,
 #units:hover {
-  background: rgb(80, 80, 80, 0.9);
+  background: rgba(80, 80, 250, 0.6);
   transition: 0.07s;
 }
 
