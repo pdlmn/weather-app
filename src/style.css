@@ -10,16 +10,18 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  justify-content: space-between;
   background-image: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(./img/winter.jpg);
-  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem;
 }
 
 header,
 footer {
   text-align: center;
   padding: 1.5rem;
-  background: rgba(70, 70, 70, 0.9);
 }
 
 main {
